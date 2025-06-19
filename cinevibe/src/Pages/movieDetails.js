@@ -37,7 +37,7 @@ export const MovieDetails = () => {
       </div>
       <div className="info-section">
         <h3 className="text-primary">{movie.title}</h3>
-        <p className="details-para">{movie.overview}</p>
+        <p className="details-para">{movie.overview}5</p>
 
 {movie.genres ? (
   <div className="genre-wrapper">
