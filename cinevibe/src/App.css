@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Margarine&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+
+*{
+    font-family: "Inter" , serif;
+}
+
+/* body{
+    min-height: 75rem;
+    padding-top: 4.5rem;
+} */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1; /* Pushes the footer down */
+}
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #8000ff;
+  margin-bottom: 5px; /* Reduced for tighter spacing */
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px; /* Reduced from invalid value */
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-item {
+  cursor: pointer;
+  color: #999;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none; /* ensure no default underline */
+}
+
+.nav-item:hover {
+  color: #8000ff;
+  /* No border-bottom here, just color change */
+}
+
+.nav-item.active {
+  color: #8000ff;
+  border-bottom: 2px solid #8000ff;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px; /* Optional space after tabs */
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #8000ff;
+  box-shadow: 0 0 8px rgba(128, 0, 255, 0.3);
+}
+
+button {
+  background-color: #8000ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(128, 0, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #6600cc;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #5900b3;
+  transform: translateY(1px);
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-list-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8000ff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row > * {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Medium Screen  */
+@media (min-width : 600px){
+  .row > * {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (min-width : 992px){
+  .row > * {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+.col {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px; /* prevents card from expanding too wide */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-body img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.read-more-button {
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #8000ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.read-more-button:hover {
+  background-color: #007bff; 
+  transform: translateY(-2px);
+}
+movie-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.movie-paragraph{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.movie-review {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+}
+
+.star {
+  color: #DAA520;
+  margin-right: 4px;
+  font-size: 14px;
+}
+.movie-layout {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+
+  /* 🔒 Prevent layout from shrinking when content grows */
+  max-width: 1000px; /* optional limit */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+.movie-poster {
+  width: 100%;
+  height: 400px; /* or whatever your card height is */
+  object-fit: cover; /* this keeps the image ratio but fills the box */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.poster-section {
+  width: 280px;
+  height: 420px;
+  flex-shrink: 0; /* 🔒 Prevent image from shrinking or getting pushed left */
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.movie-details {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-family: Arial, sans-serif;
+}
+.details-para{
+  margin-top: 20px;
+}
+.poster-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or use 'contain' if you want full image to be visible */
+  border-radius: 4px;
+}
+.genre-wrapper {
+  margin-top: 10px;
+}
+
+.genre-badge {
+  background-color: #e50914; /* Netflix-style red or choose your own */
+  color: white;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.movie-detais-star{
+  color: #DAA520;
+  font-size: 14px;
+  gap: 200px;
+}
+.movie-rating {
+  margin-top: 12px; /* 👈 Adds gap between rating and genre badges */
+  font-size: 16px;
+  color: #333;
+}
+
+.movie-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.movie-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  width: 40%;
+}
+
+.movie-table td {
+  background-color: #fff;
+}
+
+.movie-table tr:not(:last-child) td,
+.movie-table tr:not(:last-child) th {
+  border-bottom: 1px solid #ddd;
+}
+.imdb-link {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #f5c518; /* IMDb Yellow */
+  color: #000; /* black text on yellow bg like IMDb branding */
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.imdb-link:hover {
+  background-color: #d4aa00; /* darker yellow on hover */
+  color: #000;
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-title {
+  color: #c40000;            /* Similar to Bootstrap's text-danger */
+  padding: 12px 0;           /* Similar to py-2 (top and bottom padding) */
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;        /* Optional: center the result text */
+}
+
+/* Page Not Found */
+
+.not-found-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found-img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.go-home {
+  margin-top: 20px;
+}
+
+.home-button {
+  background-color: #d32f2f; /* Bootstrap's "danger" color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    position: static;
+    bottom: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+}
