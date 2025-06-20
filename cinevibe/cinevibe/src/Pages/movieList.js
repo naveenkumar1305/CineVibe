@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {Card} from "../Components/Card"
+import {Cart} from "../Components/Cart"
 import useFetch from "../hooks/useFetch";
 
 export const MovieList = ({title , apiPath}) => {
@@ -14,7 +14,7 @@ const {data: movies} = useFetch(apiPath);
       </main>
       <div className="row">
         {Array.isArray(movies) && movies.map((movie) => (
-            <Card key={movie.id} movie={movie}/>
+            <Cart key={movie.id} movie={movie}/>
         ))}
       </div>
     </div>

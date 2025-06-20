@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {Card} from "../Components/Card"
+import {Cart} from "../Components/Cart"
 import useFetch from "../hooks/useFetch";
 import { useSearchParams } from "react-router-dom";
 
@@ -18,7 +18,7 @@ export const Search = ({ apiPath }) => {
       </h5>
       <div className="row">
         {Array.isArray(movies) && movies.map((movie) => (
-            <Card key={movie.id} movie={movie}/>
+            <Cart key={movie.id} movie={movie}/>
         ))}
       </div>
     </main>

@@ -1,5 +1,8 @@
-import { MovieList , MovieDetails , PageNotFound ,Search} from "../Pages";
+import { MovieList } from "../Pages";
+import { MovieDetails } from "../Pages";
+import { PageNotFound } from "../Pages";
 import {Route , Routes} from "react-router-dom"
+import { Search } from "../Pages";
 
 const AllRoutes = () => {
     return (
