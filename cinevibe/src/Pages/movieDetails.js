@@ -16,13 +16,13 @@ export const MovieDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((jsonData) => {
-        console.log("Fetched movie data:", jsonData); // ✅ This logs the full API response
+        console.log("Fetched movie data:", jsonData);
         setMovie(jsonData);
       })
       .catch((error) => console.error("Error fetching movie data:", error));
   }
   fetchMovies();
-}, []);
+}, [url]);
 
 
     useEffect(() => {
@@ -30,7 +30,6 @@ export const MovieDetails = () => {
     });
     return (
   <main className="movie-details">
-    <h5 className="movieDetails-title"></h5>
     <div className="movie-layout">
       <div className="poster-section">
         <img src={image} alt="Movie Poster" />
